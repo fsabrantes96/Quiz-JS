@@ -11,7 +11,7 @@
 <body>
     <h1 id="main-title">Quizz - Teste seus conhecimentos sobre o esporte mais pupular do planeta ⚽</h1>
     <!-- SCORE BOARD -->
-    <div id="score-container">
+    <div id="score-container" class="hide">
         <h2>Parabéns!</h2>
         <p id="display-score"><span>90</span>%</p>
         <p>Você acertou <span id="correct-answers">0</span> de <span id="questions-qty"> 10</span> perguntas</p>
@@ -19,17 +19,17 @@
     </div>
     <!-- QUIZZ CONTAINER -->
     <div id="quizz-container">
-        <p id="question">
+        <p id="questions">
             <span id="question-number">1</span> - <span id="question-text">Qual a seleção que foi a primeira campeã da Copa do Mundo?</span> 
         </p>
+    
+        <div id="answers-box">
+            <button><span class="btn-letter">a</span> <span class="question-answer">Argentina</span></button>
+            <button><span class="btn-letter">b</span> <span class="question-answer">Inglaterra</span></button>
+            <button><span class="btn-letter">c</span> <span class="question-answer">Alemanha</span></button>
+            <button><span class="btn-letter">d</span> <span class="question-answer">Uruguai</span></button>
+        </div>
     </div>
-    <div id="answers-box">
-        <button class="correct-answer"><span class="btn-letter">a</span> <span class="question-answer">Argentina</span></button>
-        <button class="wrong-answer"><span class="btn-letter">b</span> <span class="question-answer">Inglaterra</span></button>
-        <button><span class="btn-letter">c</span> <span class="question-answer">Brasil</span></button>
-        <button><span class="btn-letter">d</span> <span class="question-answer">Uruguai</span></button>
-    </div>
-
     <!-- TEMPLATE DA RESPOSTA -->
     <button class="answer-template hide"><span class="btn-letter">d</span> <span class="question-answer">Uruguai</span></button>
 </body>
