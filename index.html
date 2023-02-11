@@ -9,6 +9,27 @@
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
-    <h1>teste</h1>
+    <h1 id="main-title">Quizz - Teste seus conhecimentos sobre o esporte mais pupular do mundo</h1>
+    <!-- SCORE BOARD -->
+    <div id="score-container">
+        <p id="display-score"><span>90</span>%</p>
+        <p>Você acertou <span id="correct-answer">0</span> de <span id="questions-qty"> perguntas</span></p>
+        <button id="restart">Refazer quizz!</button>
+    </div>
+    <!-- QUIZZ CONTAINER -->
+    <div id="quizz-container">
+        <p id="question">
+            <span id="question-number">1</span> - <span id="question-text">Qual a seleção que foi a primeira campeã da Copa do Mundo?</span> 
+        </p>
+    </div>
+    <div id="answers-box">
+        <button class="correct-answer"><span class="btn-letter">a</span> <span class="question-answer">Argentina</span></button>
+        <button class="wrong-answer"><span class="btn-letter">b</span> <span class="question-answer">Inglaterra</span></button>
+        <button><span class="btn-letter">c</span> <span class="question-answer">Brasil</span></button>
+        <button><span class="btn-letter">d</span> <span class="question-answer">Uruguai</span></button>
+    </div>
+
+    <!-- TEMPLATE DA RESPOSTA -->
+    <button class="answer-template hide"><span class="btn-letter">d</span> <span class="question-answer">Uruguai</span></button>
 </body>
 </html>
