@@ -165,11 +165,45 @@ function nextQuestion() {
         // Verifica se ainda há perguntas
         if(actualQuestion >= questions.length) {
             // apresenta a mensagem de sucesso
+            showSuccessMessage();
+            return;
         }
 
         createQuestion(actualQuestion);
 
     }, 1500)
 }
+
+// Exibe a tela final
+function showSuccessMessage() {
+    
+    hideOrShowQuizz();
+
+    // trocar dados da tela de sucesso
+
+    // Calcular o score
+    const score = ((points / questions.length) * 100).toFixed(2);
+
+    const displayScore = document.querySelector("#display-score span");
+
+    displayScore.textContent = score.toString();
+
+    // alterar número de respostas corretas
+    const correctAnswers = document.querySelector("#correct-answers");
+
+    correctAnswers.textContent = points;
+
+    // alterar o total de perguntas 
+    const totalQuestions = document.querySelector("#questions-qty");
+    totalQuestions.textContent = questions.length;
+}
+
+// Mostra ou esconde o score
+function hideOrShowQuizz() {
+    quizzContainer.classList.toggle("hide");
+    scoreContainer.classList.toggle("hide");
+
+}
+
 // Inicialização do quizz
 init();
