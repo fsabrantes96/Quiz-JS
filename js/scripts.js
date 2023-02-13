@@ -205,5 +205,18 @@ function hideOrShowQuizz() {
 
 }
 
+// Reiniciar quizz
+const restartBtn = document.querySelector("#restart");
+
+restartBtn.addEventListener("click", function() {
+
+    // zerar o jogo
+    actualQuestion = 0;
+    points = 0;
+    hideOrShowQuizz();
+    init();
+
+})
+
 // Inicialização do quizz
 init();
